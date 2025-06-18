@@ -81,7 +81,7 @@ class GfxDriver(Enum):
 		return text
 
 	def gfx_packages(self) -> list[GfxPackage]:
-		packages = []
+		packages = [GfxPackage.XorgServer, GfxPackage.XorgXinit]
 
 		match self:
 			case GfxDriver.AllOpenSource:
@@ -94,12 +94,16 @@ class GfxDriver(Enum):
 					GfxPackage.VulkanRadeon,
 					GfxPackage.VulkanIntel,
 					GfxPackage.VulkanNouveau,
+					GfxPackage.Xf86VideoAmdgpu,
+					GfxPackage.Xf86VideoAti,
 				]
 			case GfxDriver.AmdOpenSource:
 				packages += [
 					GfxPackage.Mesa,
 					GfxPackage.LibvaMesaDriver,
 					GfxPackage.VulkanRadeon,
+					GfxPackage.Xf86VideoAmdgpu,
+					GfxPackage.Xf86VideoAti,
 				]
 			case GfxDriver.IntelOpenSource:
 				packages += [
