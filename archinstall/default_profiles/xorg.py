@@ -29,6 +29,4 @@ class XorgProfile(Profile):
 	@property
 	@override
 	def packages(self) -> list[str]:
-		return [
-			'xorg-server',
-		]
+		return []
