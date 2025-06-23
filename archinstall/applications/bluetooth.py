@@ -12,6 +12,7 @@ class BluetoothApp:
 		return [
 			'bluez',
 			'bluez-utils',
+			'bluedevil',
 		]
 
 	@property
