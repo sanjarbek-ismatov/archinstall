@@ -12,7 +12,8 @@ class GnomeProfile(XorgProfile):
 	@override
 	def packages(self) -> list[str]:
 		return [
-			'gnome',
+			'gnome-shell',
+			'ptyxis',
 			'gnome-tweaks',
 		]
 
